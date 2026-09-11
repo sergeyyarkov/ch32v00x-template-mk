@@ -50,7 +50,6 @@ PROJ_SRCS=$(shell find $(SRC_DIR) -name "*.c")
 OBJS=$(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(PROJ_SRCS))
 ASMS=$(patsubst $(SRC_DIR)/%.c,$(ASM_DIR)/%.S,$(PROJ_SRCS))
 
-
 ifneq (, $(filter $(PLATFORM), $(BUILD_CONFIGS_MK)))
 include build_config/$(PLATFORM).mk
 else

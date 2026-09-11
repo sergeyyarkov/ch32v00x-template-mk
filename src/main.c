@@ -1,4 +1,4 @@
-#include "debug.h"
+#include "../platform/ch32v00x/debug.h"
 
 int main(void) {
   GPIO_InitTypeDef GPIO_InitStructure = {0};
