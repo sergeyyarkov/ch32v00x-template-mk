@@ -34,12 +34,14 @@ LD_FLAGS+=-T$(LDSCRIPT)
 
 # Adds WCH SDK to compile flow
 STARTUP_SRC=$(PLATFORM_DIR)/startup_ch32v00x.S
-PLATFORM_SRCS=$(shell find platform/ch32v00x -name "*.c")
+PLATFORM_SRCS=$(shell find $(PLATFORM_DIR) -name "*.c")
+
 EVT_SRCS=$(shell find $(EVT_DIR)/Core -name "*.c")
 EVT_SRCS+=$(shell find $(EVT_DIR)/Peripheral -name "*.c")
+
 OBJS+=$(patsubst $(EVT_DIR)/%.c,$(OBJ_DIR)/evt/%.o,$(EVT_SRCS))
 OBJS+=$(patsubst $(PLATFORM_DIR)/%.c,$(OBJ_DIR)/$(PLATFORM_DIR)/%.o,$(PLATFORM_SRCS))
-OBJS+=$(OBJ_DIR)/startup_ch32v00x.o
+OBJS+=$(OBJ_DIR)/$(basename $(notdir $(STARTUP_SRC))).o
 
 prog_flash: $(OUT_DIR)/$(TARGET).bin
 	$(FLASHER_TOOL) flash $<
