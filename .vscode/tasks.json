@@ -23,5 +23,11 @@
         "showReuseMessage": false
       }
     },
+    {
+      "label": "Flash",
+      "type": "shell",
+      "command": "make prog_flash",
+      "group": "build",
+    },
   ]
 }
