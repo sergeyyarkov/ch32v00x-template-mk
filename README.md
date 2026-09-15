@@ -20,7 +20,11 @@ sudo unzip CH32V003EVT.ZIP -d /opt/wch/CH32V003EVT
 
 4. Install [wlink](https://github.com/ch32-rs/wlink) flasher tool:
 
-5. Build and flash:
+```bash
+cargo install --git https://github.com/ch32-rs/wlink
+```
+
+5. Build and flash
 
 ```bash
 make && make prog_flash
