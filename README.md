@@ -1,6 +1,5 @@
 Project VS Code template for CH32V00x microcontrollers. It uses official WCH's SDK with `riscv32-wch-elf-gcc` compiler.
 
-
 ## Instructions to build
 
 1. Download MRS toolchain from mounriver.com: [link](https://mounriver.com/download)
@@ -11,6 +10,7 @@ sudo mkdir -p /opt/wch/MRS_Toolchain
 sudo tar -xf MRS_Toolchain_Linux_X64_V240.tar.xz -C /opt/wch --strip-components=1
 export PATH=/opt/wch/MRS_Toolchain/RISC-V\ Embedded\ GCC15/bin:$PATH
 ```
+
 3. Download SDK from wch.cn for CH32V003 for example:
 
 ```bash
@@ -29,3 +29,5 @@ cargo install --git https://github.com/ch32-rs/wlink
 ```bash
 make && make prog_flash
 ```
+
+For debugging, make sure you have the `libjaylink0` package installed.
