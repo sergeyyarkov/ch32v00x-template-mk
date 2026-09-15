@@ -12,7 +12,8 @@
       "configFiles": ["/opt/wch/MRS_Toolchain/OpenOCD/bin/wch-riscv.cfg"],
       "runToEntryPoint": "main",
       "showDevDebugOutput": "none",
-      "svdFile": "${workspaceFolder}/platform/ch32v00x/CH32V003xx.svd"
+      "svdFile": "${workspaceFolder}/platform/ch32v00x/CH32V003xx.svd",
+      "preLaunchTask": "Clean and build (debug)"
     }
   ]
 }

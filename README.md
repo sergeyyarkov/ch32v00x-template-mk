@@ -1,5 +1,11 @@
 Project VS Code template for CH32V00x microcontrollers. It uses official WCH's SDK with `riscv32-wch-elf-gcc` compiler.
 
+<p align="center">
+  <img src="https://directus.yarkov.tech/assets/eb7c37b8-a0fc-4369-8828-64a09fc6b794" alt="Screenshot" width="700">
+  <br>
+  Debugging process of CH32V003F4P6 in VS Code
+</p>
+
 ## Instructions to build
 
 1. Download MRS toolchain from mounriver.com: [link](https://mounriver.com/download)
